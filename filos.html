@@ -1,56 +1,195 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-	<title>Select a University</title>
+
+	<title>Select an Ivy League University</title>
+
 	<style>
-		.dropdown {
-			position: relative;
-			display: inline-block;
+
+		body {
+
+			font-family: Arial, sans-serif;
+
+			background-color: #f2f2f2;
+
 		}
 
-		.dropbtn {
-			background-color: #4CAF50;
-			color: white;
-			padding: 16px;
+
+
+		h1 {
+
+			color: #006699;
+
+			text-align: center;
+
+		}
+
+
+
+		form {
+
+			margin: auto;
+
+			width: 50%;
+
+			background-color: #fff;
+
+			padding: 20px;
+
+			border-radius: 10px;
+
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+		}
+
+
+
+		label {
+
+			display: block;
+
+			margin-bottom: 10px;
+
+			font-weight: bold;
+
+		}
+
+
+
+		select {
+
+			display: block;
+
+			width: 100%;
+
+			padding: 10px;
+
+			border: 1px solid #ccc;
+
+			border-radius: 5px;
+
+			box-sizing: border-box;
+
 			font-size: 16px;
+
+			margin-bottom: 20px;
+
+		}
+
+
+
+		select:focus {
+
+			outline: none;
+
+			border-color: #006699;
+
+		}
+
+
+
+		option {
+
+			color: #006699;
+
+		}
+
+
+
+		button {
+
+			background-color: #006699;
+
+			color: #fff;
+
 			border: none;
+
+			padding: 10px 20px;
+
+			border-radius: 5px;
+
+			font-size: 16px;
+
 			cursor: pointer;
+
 		}
 
-		.dropdown-content {
-			display: none;
-			position: absolute;
-			z-index: 1;
+
+
+		button:hover {
+
+			background-color: #005580;
+
 		}
 
-		.dropdown-content a {
-			color: black;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
-		}
 
-		.dropdown:hover .dropdown-content {
-			display: block;
-		}
 
-		.dropdown:hover .dropbtn {
-			background-color: #3e8e41;
-		}
 	</style>
+
 </head>
+
 <body>
-	<h1>Select a University</h1>
-	<p>Please select a university:</p>
-	<div class="dropdown">
-		<button class="dropbtn">Select a University</button>
-		<div class="dropdown-content">
-			<a href="#">Harvard University</a>
-			<a href="#">Yale University</a>
-			<a href="#">Princeton University</a>
-			<a href="#">Stanford University</a>
-			<a href="#">Massachusetts Institute of Technology (MIT)</a>
-		</div>
-	</div>
+
+	<h1>Select an Ivy League University</h1>
+
+	<p>Select University</p>
+
+	<form>
+
+		<select id="university" onchange="showOptions()">
+
+			<option value="">Select an Ivy League University</option>
+
+			<option value="Brown">Brown University</option>
+
+			<option value="Columbia">Columbia University</option>
+
+			<option value="Cornell">Cornell University</option>
+
+			<option value="Dartmouth">Dartmouth College</option>
+
+			<option value="Harvard">Harvard University</option>
+
+			<option value="Princeton">Princeton University</option>
+
+			<option value="University of Pennsylvania">University of Pennsylvania</option>
+
+			<option value="Yale">Yale University</option>
+
+		</select>
+
+		<div id="options"></div>
+
+		<button type="submit">Submit</button>
+
+	</form>
+
+	<script>
+
+		function showOptions() {
+
+			var university = document.getElementById("university").value;
+
+			var options = document.getElementById("options");
+
+
+
+			if (university) {
+
+				options.innerHTML = "<label for='status'>Are you a:</label><select id='status' name='status'><option value='member'>Current Student/Faculty/Staff</option><option value='alumni'>Alumni</option><option value='party-seeker'>Party Seeker</option><option value='other'>Other</option></select>";
+
+			} else {
+
+				options.innerHTML = "";
+
+			}
+
+		}
+
+	</script>
+
 </body>
+
 </html>
