@@ -164,31 +164,8 @@
 		<button type="submit">Submit</button>
 
 	</form>
-
+	
 	<script>
-
-		function showOptions() {
-
-			var university = document.getElementById("university").value;
-
-			var options = document.getElementById("options");
-
-
-
-			if (university) {
-
-				options.innerHTML = "<label for='status'>Are you a:</label><select id='status' name='status'><option value='member'>Current Student/Faculty/Staff</option><option value='alumni'>Alumni</option><option value='party-seeker'>Party Seeker</option><option value='other'>Other</option></select>";
-
-			} else {
-
-				options.innerHTML = "";
-
-			}
-
-		}
-
-	</script>
-
 	<div id="fraternity-options" style="display: none;">
 
         <label for="fraternity">Choose a fraternity:</label>
@@ -234,6 +211,32 @@
       </div>
 
       <input type="submit" value="Submit">
+	</script>
+
+	<script>
+
+		function showOptions() {
+
+			var university = document.getElementById("university").value;
+
+			var options = document.getElementById("options");
+
+
+
+			if (university) {
+
+				options.innerHTML = "<label for='status'>Are you a:</label><select id='status' name='status'><option value='member'>Current Student/Faculty/Staff</option><option value='alumni'>Alumni</option><option value='party-seeker'>Party Seeker</option><option value='other'>Other</option></select>";
+
+			} else {
+
+				options.innerHTML = "";
+
+			}
+
+		}
+
+	</script>
+
 
     </form>
 
