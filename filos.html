@@ -1,245 +1,96 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
-	<title>Select an Ivy League University</title>
-
+	<title>Select Ivy League University</title>
 	<style>
-
 		body {
-
-			font-family: Arial, sans-serif;
-
-			background-color: #f2f2f2;
-
+			background-color: #F2F2F2; /* College-themed background color */
 		}
-
-
-
-		h1 {
-
-			color: #006699;
-
-			text-align: center;
-
-		}
-
-
-
+		
 		form {
-
-			margin: auto;
-
-			width: 50%;
-
-			background-color: #fff;
-
-			padding: 20px;
-
-			border-radius: 10px;
-
-			box-shadow: 0 0 10px rgba(0,0,0,0.2);
-
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
 		}
-
-
-
+		
 		label {
-
-			display: block;
-
+			font-size: 20px;
+			margin-top: 20px;
 			margin-bottom: 10px;
-
-			font-weight: bold;
-
+			text-align: center;
+			color: #000; /* Black text color */
 		}
-
-
-
+		
 		select {
-
-			display: block;
-
-			width: 100%;
-
-			padding: 10px;
-
-			border: 1px solid #ccc;
-
-			border-radius: 5px;
-
-			box-sizing: border-box;
-
 			font-size: 16px;
-
+			padding: 5px;
 			margin-bottom: 20px;
-
-		}
-
-
-
-		select:focus {
-
-			outline: none;
-
-			border-color: #006699;
-
-		}
-
-
-
-		option {
-
-			color: #006699;
-
-		}
-
-
-
-		button {
-
-			background-color: #006699;
-
-			color: #fff;
-
-			border: none;
-
-			padding: 10px 20px;
-
+			color: #000; /* Black text color */
+			background-color: #FFF; /* White background for dropdown menus */
+			border: 1px solid #AAA; /* Gray border for dropdown menus */
 			border-radius: 5px;
-
-			font-size: 16px;
-
+		}
+		
+		select:hover {
+			background-color: #E6F3FF; /* Light blue hover color */
+		}
+		
+		input[type="submit"] {
+			font-size: 20px;
+			padding: 10px 20px;
+			background-color: #FF4D4D; /* Red button color */
+			color: #FFF;
+			border: none;
+			border-radius: 5px;
 			cursor: pointer;
-
+			transition: background-color 0.3s ease;
 		}
-
-
-
-		button:hover {
-
-			background-color: #005580;
-
+		
+		input[type="submit"]:hover {
+			background-color: #FF6666; /* Lighter red hover color */
 		}
-
-
-
 	</style>
-
 </head>
-
 <body>
-
-	<h1>Select an Ivy League University</h1>
-
-
 	<form>
-
-		<select id="university" onchange="showOptions()">
-
-			<option value="">Select an Ivy League University</option>
-
+		<label for="university">Select an Ivy League University:</label>
+		<select id="university" name="university">
 			<option value="Brown">Brown University</option>
-
 			<option value="Columbia">Columbia University</option>
-
 			<option value="Cornell">Cornell University</option>
-
 			<option value="Dartmouth">Dartmouth College</option>
-
 			<option value="Harvard">Harvard University</option>
-
+			<option value="Penn">University of Pennsylvania</option>
 			<option value="Princeton">Princeton University</option>
-
-			<option value="University of Pennsylvania">University of Pennsylvania</option>
-
 			<option value="Yale">Yale University</option>
-
 		</select>
-
-		<div id="options"></div>
-
-		<button type="submit">Submit</button>
-
+		
+		<label for="status">Select your membership status:</label>
+		<select id="status" name="status">
+			<option value="pledge">Pledge</option>
+			<option value="member">Member</option>
+			<option value="alumni">Alumni</option>
+			<option value="party-seeker">Party-seeker</option>
+		</select>
+		
+		<label for="fraternity">Select a Fraternity or Sorority:</label>
+		<select id="fraternity" name="fraternity">
+			<option value="Sigma Nu">Sigma Nu</option>
+			<option value="Leo">Leo</option>
+			<option value="DEKE">DEKE</option>
+			<option value="Chi Psi">Chi Psi</option>
+			<option value="Sig Chi">Sig Chi</option>
+			<option value="AEPI">AEPI</option>
+			<option value="ADPHI">ADPHI</option>
+			<option value="Theta">Theta</option>
+			<option value="Kappa Kappa Gamma">Kappa Kappa Gamma</option>
+			<option value="Pi Phi">Pi Phi</option>
+			<option value="Alpha Phi">Alpha Phi</option>
+			<option value="Delta Gamma">Delta Gamma</option>
+		</select>
+		
+		<input type="submit" value="Submit">
 	</form>
-	
-	<script>
-	<div id="fraternity-options" style="display: none;">
-
-        <label for="fraternity">Choose a fraternity:</label>
-
-        <select id="fraternity" name="fraternity">
-
-          <option value="">--Please choose a fraternity--</option>
-
-          <option value="sigma-nu">Sigma Nu</option>
-
-          <option value="leo">Leo</option>
-
-          <option value="chi-psi">Chi Psi</option>
-
-          <option value="edon">Edon</option>
-
-          <option value="aepi">AEPI</option>
-
-          <option value="deke">DEKE</option>
-
-        </select>
-
-      </div>
-
-      <div id="sorority-options" style="display: none;">
-
-        <label for="sorority">Choose a sorority:</label>
-
-        <select id="sorority" name="sorority">
-
-          <option value="">--Please choose a sorority--</option>
-
-          <option value="theta">Theta</option>
-
-          <option value="pi-phi">Pi Phi</option>
-
-          <option value="kkg">Kappa Kappa Gamma</option>
-
-          <option value="alpha-phi">Alpha Phi</option>
-
-        </select>
-
-      </div>
-
-      <input type="submit" value="Submit">
-	</script>
-
-	<script>
-
-		function showOptions() {
-
-			var university = document.getElementById("university").value;
-
-			var options = document.getElementById("options");
-
-
-
-			if (university) {
-
-				options.innerHTML = "<label for='status'>Are you a:</label><select id='status' name='status'><option value='member'>Current Student/Faculty/Staff</option><option value='alumni'>Alumni</option><option value='party-seeker'>Party Seeker</option><option value='other'>Other</option></select>";
-
-			} else {
-
-				options.innerHTML = "";
-
-			}
-
-		}
-
-	</script>
-
-
-    </form>
-
 </body>
-
 </html>
