@@ -4,53 +4,59 @@
 	<title>Select Ivy League University</title>
 	<style>
 		body {
-			background-color: #F2F2F2; /* College-themed background color */
+			background-image: url("college-background.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			font-family: 'GFS Neohellenic', sans-serif;
+			color: black;
+		}
+		
+		h1 {
+			font-size: 48px;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			margin-top: 50px;
+			margin-bottom: 30px;
 		}
 		
 		form {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			margin-top: 50px;
 		}
 		
 		label {
-			font-size: 20px;
-			margin-top: 20px;
+			font-size: 24px;
+			margin-top: 30px;
 			margin-bottom: 10px;
 			text-align: center;
-			color: #000; /* Black text color */
 		}
 		
 		select {
-			font-size: 16px;
-			padding: 5px;
-			margin-bottom: 20px;
-			color: #000; /* Black text color */
-			background-color: #FFF; /* White background for dropdown menus */
-			border: 1px solid #AAA; /* Gray border for dropdown menus */
+			font-size: 20px;
+			padding: 10px;
+			margin-bottom: 30px;
+			width: 300px;
 			border-radius: 5px;
-		}
-		
-		select:hover {
-			background-color: #E6F3FF; /* Light blue hover color */
 		}
 		
 		input[type="submit"] {
-			font-size: 20px;
-			padding: 10px 20px;
-			background-color: #FF4D4D; /* Red button color */
-			color: #FFF;
+			font-size: 24px;
+			padding: 15px 30px;
+			background-color: red;
+			color: #fff;
 			border: none;
 			border-radius: 5px;
 			cursor: pointer;
-			transition: background-color 0.3s ease;
 		}
 		
 		input[type="submit"]:hover {
-			background-color: #FF6666; /* Lighter red hover color */
+			background-color: lightblue;
 		}
 	</style>
+	<link href="https://fonts.googleapis.com/css2?family=GFS+Neohellenic&display=swap" rel="stylesheet">
 </head>
 <body>
 	<form>
